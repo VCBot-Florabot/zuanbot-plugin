@@ -39,14 +39,14 @@ def event(data: dict):  # 事件函数,FloraBot每收到一个事件都会调用
 
 def zuan_lite():
     #load zuan_lite.json
-    zuan_lite_list=json.load(open(f"./{flora_api.get("ThePluginPath")}/res/zuan-lite.json",mode="r",errors='ignore'))
+    zuan_lite_list=json.load(open(f"./{flora_api.get('ThePluginPath')}/res/zuan-lite.json",mode="r",errors='ignore'))
     num = make_random(len(zuan_lite_list))
     print(zuan_lite_list[num]['index'])
     return zuan_lite_list[num]['text']
 
 def zuan_full():
     #load zuan_full.json
-    zuan_full_list=json.load(open(f"./{flora_api.get("ThePluginPath")}/res/zuan-full.json",mode="r",errors='ignore'))
+    zuan_full_list=json.load(open(f"./{flora_api.get('ThePluginPath')}/res/zuan-full.json",mode="r",errors='ignore'))
     num = make_random(len(zuan_full_list))
     print(zuan_full_list[num]['index'])
     return zuan_full_list[num]['text']
