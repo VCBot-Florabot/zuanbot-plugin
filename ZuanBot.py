@@ -34,6 +34,7 @@ def event(data: dict):  # 事件函数,FloraBot每收到一个事件都会调用
         #print(uid, gid, mid, msg)
         if gid is not None:
             send_msg(msg="请在私聊环境中使用",gid=gid,uid=uid)
+            return
         if msg == "#祖安lite":
             send_msg(msg=zuan_lite(), gid=gid,uid=uid)
         if msg == "#祖安full":
