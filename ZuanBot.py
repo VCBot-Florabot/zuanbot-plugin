@@ -32,7 +32,7 @@ def event(data: dict):  # 事件函数,FloraBot每收到一个事件都会调用
     if msg is not None:
         msg = msg.replace("&#91;", "[").replace("&#93;", "]").replace("&amp;", "&").replace("&#44;", ",")  # 消息需要将URL编码替换到正确内容
         #print(uid, gid, mid, msg)
-        if gid is not None:
+        if gid is not None and msg in ["#祖安lite","#祖安full"]:
             send_msg(msg="请在私聊环境中使用",gid=gid,uid=uid)
             return
         if msg == "#祖安lite":
